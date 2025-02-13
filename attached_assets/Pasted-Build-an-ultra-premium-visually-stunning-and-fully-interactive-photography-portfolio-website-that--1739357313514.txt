@@ -1,0 +1,63 @@
+Build an ultra-premium, visually stunning, and fully interactive photography portfolio website that feels like a high-end art gallery. The website should:
+
+1. Homepage (Hero Section):
+Feature a fullscreen auto-playing video background or a high-resolution, animated hero slider showcasing your best shots.
+Add a 3D parallax scrolling effect where images subtly move as the user scrolls or tilts their device.
+Include an elegant tagline like "Discover the World Through My Lens" with smooth text fade-ins and a shimmering light effect.
+Integrate an interactive "Explore Portfolio" button with a hover animation (e.g., a glowing border or ripple effect).
+2. Gallery (Core Section):
+Implement a dynamic, filterable gallery using categories like Travel, Nature, Portraits, etc.
+Use infinite scrolling for a seamless browsing experience.
+Include a lightbox viewer with cinematic transitions (e.g., zoom-in and fade) and smooth carousel navigation between images.
+Add AI-powered auto-tagging for photo metadata to improve searchability within the site.
+Allow users to download high-res wallpapers of selected photos for free or gated behind a sign-up CTA.
+3. Interactive Features:
+Add a before-and-after slider to showcase unedited vs. edited versions of your photos.
+Include animated hotspots on images (e.g., reveal location, camera settings, or story) when users hover.
+Integrate a 3D photo display (like flipping photo cards) for a luxurious browsing experience.
+4. About Section:
+Create a visually immersive "About Me" page with scroll-triggered animations (e.g., text fades, image zoom-ins).
+Include a short video introduction of yourself with a typewriter-style animation for text overlays.
+Add an interactive timeline of your photography journey, with smooth transitions and clickable highlights.
+5. Interactive Portfolio Showroom:
+Build an immersive gallery experience where users can "walk" through a virtual gallery of your photos (e.g., WebGL or Three.js for 3D environments).
+Let users click on framed images to expand and learn more about the story behind the shot.
+Add soundscapes (e.g., nature sounds, ambient music) to create an emotional connection to each category.
+6. Client/Collaboration Section:
+Showcase a "Brands I’ve Worked With" carousel, styled with luxury aesthetics (e.g., logos glowing on hover).
+Add testimonials with an elegant, animated card slider.
+Include a downloadable media kit button with hover effects (e.g., shine or color gradient shift).
+7. Contact Page:
+Add a modern, interactive contact form with smooth transitions (e.g., input fields expanding on click).
+Integrate live chat functionality for quick inquiries (e.g., Crisp or Tidio).
+Use map integration with animated location pins showing where your photos were taken.
+8. Animations & Transitions:
+Use Framer Motion or GSAP for professional-grade animations, including scroll-triggered animations and elegant hover effects.
+Add subtle, premium cursor effects (e.g., a trailing glow or magnifier for images).
+Incorporate page transition animations (e.g., smooth fade or slide transitions when navigating between pages).
+9. Responsive Design:
+Make the website fully responsive and optimized for all devices (mobile, tablet, desktop, 4K screens).
+Include custom layouts for portrait and landscape modes on mobile devices.
+10. Luxury Design Aesthetics:
+Use neomorphism and glassmorphism for buttons and cards to give a futuristic, premium feel.
+Opt for a dark theme with glowing accents (e.g., gold or teal highlights) for a cinematic look.
+Add soft gradients, reflections, and shadows to UI elements.
+Choose elegant typography (e.g., Playfair Display, Lora, or Montserrat) and pair it with refined, modern icons.
+11. Performance Optimization:
+Compress and optimize images for faster loading without losing quality.
+Use lazy-loading and preloading for images and assets.
+Ensure smooth performance with a Lighthouse score of 90+ for desktop and mobile.
+12. SEO & Analytics:
+Integrate advanced SEO features: dynamic meta tags, Open Graph data, and image alt text.
+Add Google Analytics and heatmaps for tracking user behavior.
+13. Tech Stack:
+Use React.js for the front end and Tailwind CSS for styling.
+Implement animations with Framer Motion or GSAP.
+Use Firebase or Vercel for hosting and backend support.
+Leverage Swiper.js for carousels and Three.js for 3D experiences.
+What Makes This Next-Level?
+3D Gallery: Immersive storytelling with virtual gallery walkthroughs.
+Luxury Aesthetics: Neomorphism, glowing accents, and cinematic visuals.
+Rich Animations: High-end transitions, parallax scrolling, and hover effects.
+Interactive Engagement: AI tagging, lightbox with soundscapes, and client-focused features.
+Performance: Fully optimized for SEO, speed, and responsiveness.

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 45 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 45 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+    cursor: none;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Cursor */
+  .custom-cursor {
+    @apply fixed w-8 h-8 pointer-events-none mix-blend-difference z-50;
+    background: radial-gradient(circle, hsl(var(--primary)), transparent 50%);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s;
+  }
+
+  .custom-cursor.hover {
+    @apply w-12 h-12;
+    background: radial-gradient(circle, hsl(var(--primary)), transparent 60%);
+  }
+
+  /* Luxury Animations */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glow {
+    0%, 100% { filter: brightness(100%) blur(0px); }
+    50% { filter: brightness(150%) blur(2px); }
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  .animate-wave {
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  /* Premium Glassmorphism */
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 0 80px rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card {
+    @apply glass-effect;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.025) 50%,
+      rgba(255, 255, 255, 0)
+    );
+    transition: all 0.3s ease-in-out;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+      0 10px 20px rgba(0, 0, 0, 0.2),
+      0 6px 6px rgba(0, 0, 0, 0.1),
+      inset 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Luxury Neomorphism */
+  .neo-effect {
+    @apply bg-secondary relative overflow-hidden;
+    box-shadow: 
+      5px 5px 15px rgba(0, 0, 0, 0.4),
+      -5px -5px 15px rgba(255, 255, 255, 0.05),
+      inset 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .neo-effect:hover {
+    box-shadow: 
+      8px 8px 20px rgba(0, 0, 0, 0.5),
+      -8px -8px 20px rgba(255, 255, 255, 0.07),
+      inset 0 0 25px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Premium Gradients */
+  .gradient-border {
+    @apply relative;
+    &::before {
+      content: '';
+      @apply absolute inset-0 rounded-lg;
+      background: linear-gradient(
+        45deg,
+        hsl(var(--primary)),
+        transparent 30%,
+        transparent 70%,
+        hsl(var(--primary))
+      );
+      z-index: -1;
+      margin: -1px;
+      animation: glow 3s ease-in-out infinite;
+    }
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(calc(var(--primary-hue) + 30) 100% 50%)
+    );
+  }
+
+  /* Luxury Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-500;
+    &:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 15px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .hover-glow {
+    @apply transition-all duration-500;
+    &:hover {
+      filter: brightness(1.2) drop-shadow(0 0 15px hsl(var(--primary) / 0.6));
+    }
+  }
+
+  /* Scroll Reveal */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.6, -0.05, 0.01, 0.99);
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+    transition: all 0.3s ease-in-out;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
